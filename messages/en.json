@@ -1,4 +1,17 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"hello_world": "Hello, {name} from en!",
+	"login_header_title": "Sign in to Telegram",
+	"login_description_line1": "Please confirm your country code",
+	"login_description_line2": "and enter your phone number.",
+	"login_label_country": "Country",
+	"country_az": "Azerbaijan",
+	"country_us": "United States",
+	"country_gb": "United Kingdom",
+	"login_label_phone": "Phone Number",
+	"login_placeholder_phone": "--- --- ----",
+	"login_button_next": "NEXT",
+	"login_button_qrcode": "LOG IN BY QR CODE",
+	"country_ru": "Russia",
+	"country_de": "Germany"
 }

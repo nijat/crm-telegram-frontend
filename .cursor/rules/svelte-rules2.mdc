@@ -1,0 +1,7 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Using `on:change` to listen to the change event is deprecated. Use the event attribute `onchange` instead
+https://svelte.dev/e/event_directive_deprecatedsvelte(event_directive_deprecated)
