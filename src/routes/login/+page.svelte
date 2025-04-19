@@ -119,16 +119,13 @@
 		<LoginHeader />
 		<LoginDescription />
 
-		<!-- DEBUG: Display current login step -->
-		<p class="text-center text-xs text-yellow-300">Current Step: {loginStep}</p>
-
 		<div class="space-y-4">
 			{#if loginStep === 'phone'}
 				<CountrySelector value={selectedCountryCode} on:countryChange={handleCountryChange} />
 				<PhoneNumberInput bind:value={phoneNumber} placeholder={m.login_placeholder_phone()} />
 			{:else if loginStep === 'code'}
 				<!-- DEBUG: Confirm rendering code block -->
-				<p class="text-center text-xs text-green-300">Rendering Code Input Block</p>
+				<!-- <p class="text-center text-xs text-green-300">Rendering Code Input Block</p> -->
 				<div>
 					<label for="code" class="block text-sm font-medium text-gray-300 mb-1">Verification Code</label>
 					<input 

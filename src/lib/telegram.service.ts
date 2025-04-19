@@ -434,6 +434,31 @@ export class TelegramService {
     // return this.client?.connected && this.isConnected; // This might be too strict if client disconnects temporarily
     return this.isConnected; // Rely on our state management logic
   }
+
+  // NEW: Method to get current user info
+  public async getMe(): Promise<any | null> { // TODO: Define a proper User type
+    if (!this.isConnected || !this.client || !this.client.connected) {
+      console.log('[getMe] Not connected.');
+      // Attempt to reconnect using session if possible
+      if (!(await this.connectAndCheck())) {
+         console.log('[getMe] Reconnect attempt failed.');
+         return null; // Still not connected
+      }
+       console.log('[getMe] Reconnect successful.');
+    }
+
+    try {
+      console.log('[getMe] Fetching current user info...');
+      const me = await this.client.getMe();
+      console.log('[getMe] User info obtained:', me?.firstName);
+      // You might want to return a subset of the user object
+      // e.g., { id: me.id, firstName: me.firstName, lastName: me.lastName, username: me.username, phone: me.phone }
+      return me;
+    } catch (error) {
+      console.error('[getMe] Error fetching user info:', error);
+      return null;
+    }
+  }
 }
 
 // Export the singleton instance directly
