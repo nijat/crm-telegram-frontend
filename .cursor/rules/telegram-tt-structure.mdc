@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# telegram-tt Project Structure
+
+This project appears to be a Telegram bot implementation.
+
+## Key Files & Directories
+
+*   **Package Management:** Check [package.json](mdc:package.json) for dependencies and scripts.
+*   **Entry Point:** The main application logic likely starts in `src/index.ts` or `src/main.ts`. Look for [src/index.ts](mdc:src/index.ts) or [src/main.ts](mdc:src/main.ts).
+*   **Configuration:** Bot tokens and other settings might be in a configuration file like `src/config.ts`, `.env`, or `config/`. Check for [src/config.ts](mdc:src/config.ts) or [.env](mdc:.env).
+*   **Bot Logic/Handlers:** Command handlers and core bot logic might reside in directories like `src/handlers/`, `src/commands/`, or `src/modules/`. Explore [src/handlers/](mdc:src/handlers) or [src/commands/](mdc:src/commands).
+*   **Services/Utilities:** Helper functions or external service integrations could be in `src/services/` or `src/utils/`. Look into [src/services/](mdc:src/services) or [src/utils/](mdc:src/utils).
+
+Remember to adjust these paths if the actual structure differs.
